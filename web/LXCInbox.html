@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>Consulta LXCInbox</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--Necesarios para BOOTSTRAP-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!--Necesarios para DATATABLES-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">        
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+
+        <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.1/js/dataTables.buttons.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.1.3/jszip.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/pdfmake.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdnjs.cloudflare.com/ajax/libs/pdfmake/0.1.32/vfs_fonts.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.html5.min.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/buttons/1.5.1/js/buttons.print.min.js"></script>
+
+        <!--Necesarios para JQUERY UI-->
+        <script src="https://code.jquery.com/ui/1.12.0/jquery-ui.min.js" integrity="sha256-eGE6blurk5sHj+rmkfsGYeKyZx3M4bG+ZlFyA7Kns7E=" crossorigin="anonymous"></script>
+        <link href="https://code.jquery.com/ui/1.12.1/themes/ui-darkness/jquery-ui.css" rel="stylesheet" type="text/css" />
+        <script src="https://code.jquery.com/jquery-migrate-1.2.1.min.js"></script>          
+
+        <!--Necesarios para DatePicker-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.22.0/moment-with-locales.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/js/bootstrap-datetimepicker.min.js"></script>
+        <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datetimepicker/4.17.47/css/bootstrap-datetimepicker.min.css" rel="stylesheet"/>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.js" integrity="sha256-gQzieXjKD85Ibbpg4l8GduIagpt4oUSQRYaDaLd+8sI=" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-ui-timepicker-addon/1.6.3/jquery-ui-timepicker-addon.min.css" integrity="sha256-AbZqn2w4KXugIvUu6QtV4nK4KlXj4nrIp6x/8S4Xg2U=" crossorigin="anonymous" />
+
+        <!--Necesarios para Font Awesome-->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+        <!--Necesarios para Led Lights-->
+        <link rel="stylesheet" href="Styles/LedLights/LedLights.css">	
+
+        <!--Necesarios para FaviIcon-->
+        <link rel="icon" type="image/ico" href="Img/favicon.ico">
+
+        <!--Necesarios para SweetAlerts-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.19.1/sweetalert2.min.css" integrity="sha256-WZCgtWbJvGINRLoL2hU/dgHZtSw2oWveu7HIf5XTCzU=" crossorigin="anonymous" />
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.19.1/sweetalert2.min.js" integrity="sha256-sCOmCMtwHyoG92rrKwe+ONeOLkqnPRdrm8/XvMshKJo=" crossorigin="anonymous"></script>
+
+        <!--Principales Creados-->
+        <link href="Styles/PrincipalLog.css" rel="stylesheet" type="text/css" />
+        <script src="Scripts/ProcesoDataTables.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                dibujarDataTableLX('#tablaLogs');
+            });
+        </script>
+
+    </head>
+
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="navbar-brand" href="#"> 
+                <img src="Img/BellotaBlanco.svg" width="200" height="50" class="d-inline-block align-top" alt="">                
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="Index.html">Inicio</a>
+                    <a class="nav-item nav-link" href="ServiciosWEB.html">Servicios WEB</a>
+                    <a class="nav-item nav-link active" href="LXCInbox.html">Consulta LXCInbox <span class="sr-only">(current)</span></a>                    
+                </div>
+            </div>
+        </nav>
+
+        <br>        
+        <div class="container-fluid">
+
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-auto">
+                    <h1>Log de LXConectors</h1>
+                </div>
+            </div>		
+
+            <br>
+
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-auto">
+
+                    <form id="consultasLX">
+                        <div class="row">
+                            <div class="col">
+                                <label for="selectObjeto">ID Objeto LX: </label>
+                                <select id="selectObjeto">  
+                                    <option value="Seleccione">Seleccione un Objeto</option>
+                                    <option value="CustomerOrder">Customer Order</option>
+                                    <option value="Inventory">Inventory</option>                            
+                                    <option value="Item">Item</option>     
+                                    <option value="ItemFacility">ItemFacility</option>     
+                                </select>
+                            </div>
+                            <div class="col">
+                                <label for="mensajeProceso">Mensaje Proceso: </label>
+                                <input type="text" name="mensajeProceso" id="mensajeProceso">
+                            </div> 
+                            <div class="col">
+                                <label for="fechaDesde">Fecha Desde: </label>
+                                <input type="text" name="fechaDesde" id="fechaDesde">
+                            </div>
+                            <div class="col">
+                                <label for="fechaHasta">Fecha Hasta: </label>
+                                <input type="text" name="fechaHasta" id="fechaHasta">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <label for="usuarioProceso">Usuario Proceso: </label>
+                                <input type="text" name="usuarioProceso" id="usuarioProceso">
+                            </div> 
+                            <div class="col">
+                                <label for="estadoProceso">Estado Proceso: </label>
+                                <select id="estadoProceso">  
+                                    <option value="Seleccione">Seleccione un Estado</option>
+                                    <option value="Pass">Exitoso</option>
+                                    <option value="Fail">Fallido</option>                            
+                                </select>
+                            </div> 
+                            <div class="col">
+                                <label for="nombreFuente">Nombre Fuente: </label>
+                                <input type="text" name="nombreFuente" id="nombreFuente">
+                            </div>
+                            <div class="col">                               
+                                <button type="submit" form="consultasLX" value="Submit" id="btnSubmit" class="btn btn-dark">Buscar</button>
+                                <button type="reset" form="consultasLX" value="Limpiar" class="btn btn-danger">Limpiar</button>
+                            </div> 
+                        </div>
+                    </form>
+
+
+                    <br>
+
+                    <table class="table table-bordered table-responsive" id="tablaLogs">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>IdentidadObjeto</th>
+                                <th>MensajeProceso</th>
+                                <th>XMLEnviado</th>
+                                <th>XMLResultado</th>
+                                <th>FechaProceso</th>
+                                <th>Usuario</th>                                
+                                <th>EstadoProceso</th>
+                                <th>NombreFuente</th>                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr> 
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr> 
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr> 
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr> 
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr> 
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr> 
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr> 
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr> 
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr> 
+                            <tr>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                                <td> </td>
+                            </tr>                             
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>IdentidadObjeto</th>
+                                <th>MensajeProceso</th>
+                                <th>XMLEnviado</th>
+                                <th>XMLResultado</th>
+                                <th>FechaProceso</th>
+                                <th>Usuario</th>                                
+                                <th>EstadoProceso</th>
+                                <th>NombreFuente</th>     
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

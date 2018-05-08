@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<catalog xmlns="urn:oasis:names:tc:entity:xmlns:xml:catalog" prefer="system">
+    <system systemId="http://localhost:8080/InteroperaLX/PedidosService?wsdl" uri="src/conf/xml-resources/web-service-references/PedidosService/wsdl/localhost_8080/InteroperaLX/PedidosService.wsdl"/>
+    <system systemId="http://localhost:8080/InteroperaLX/PedidosService?xsd=1" uri="src/conf/xml-resources/web-service-references/PedidosService/wsdl/localhost_8080/InteroperaLX/PedidosService.xsd_1.xsd"/>
+    <system systemId="http://192.168.0.201:8081/WCFBatch.svc" uri="src/conf/xml-resources/web-service-references/WCFBatch/wsdl/192.168.0.201_8081/WCFBatch.svc.xml"/>
+    <system systemId="http://192.168.0.201:8081/WCFBatch.svc?xsd=xsd4" uri="src/conf/xml-resources/web-service-references/WCFBatch/wsdl/192.168.0.201_8081/WCFBatch.svc.xsd_xsd4.xsd"/>
+    <system systemId="http://192.168.0.201:8081/WCFBatch.svc?wsdl" uri="src/conf/xml-resources/web-service-references/WCFBatch/wsdl/192.168.0.201_8081/WCFBatch.svc.wsdl"/>
+    <system systemId="http://192.168.0.201:8081/WCFBatch.svc?xsd=xsd0" uri="src/conf/xml-resources/web-service-references/WCFBatch/wsdl/192.168.0.201_8081/WCFBatch.svc.xsd_xsd0.xsd"/>
+    <system systemId="http://192.168.0.201:8081/WCFBatch.svc?xsd=xsd1" uri="src/conf/xml-resources/web-service-references/WCFBatch/wsdl/192.168.0.201_8081/WCFBatch.svc.xsd_xsd1.xsd"/>
+    <system systemId="http://192.168.0.201:8081/WCFBatch.svc?xsd=xsd2" uri="src/conf/xml-resources/web-service-references/WCFBatch/wsdl/192.168.0.201_8081/WCFBatch.svc.xsd_xsd2.xsd"/>
+    <system systemId="http://192.168.0.201:8081/WCFBatch.svc?xsd=xsd3" uri="src/conf/xml-resources/web-service-references/WCFBatch/wsdl/192.168.0.201_8081/WCFBatch.svc.xsd_xsd3.xsd"/>
+    <system systemId="http://192.168.0.201:8081/WCFBatch.svc?singleWsdl" uri="src/conf/xml-resources/web-service-references/WCFBatch/wsdl/192.168.0.201_8081/WCFBatch.svc.singlewsdl.wsdl"/>
+</catalog>

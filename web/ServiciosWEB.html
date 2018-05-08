@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html lang="en">
+    <head>
+        <title>Servicios WEB - InteroperaERP</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!--Necesarios para BOOTSTRAP-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+        <!--Necesarios para DATATABLES-->
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.10.16/css/jquery.dataTables.css">
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://code.jquery.com/jquery-1.12.4.js"></script>
+        <script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.16/js/jquery.dataTables.min.js"></script>
+
+        <!--Necesarios para Led Lights-->
+        <link rel="stylesheet" href="Styles/LedLights/LedLights.css">	
+
+        <!--Necesarios para FaviIcon-->
+        <link rel="icon" type="image/ico" href="Img/favicon.ico">
+
+        <!--Principales Creados-->        
+        <script src="Scripts/ProcesoDataTables.js"></script>
+
+        <script type="text/javascript">
+            $(document).ready(function () {
+                dibujarDataTableWS('#tablaServicios');
+            });
+        </script>
+    </head>
+    <body>
+
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <a class="" href="#"> 
+                <img src="Img/BellotaBlanco.svg" width="200" height="50" class="d-inline-block align-top" alt="">                
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav">
+                    <a class="nav-item nav-link" href="Index.html">Inicio</a>
+                    <a class="nav-item nav-link active" href="ServiciosWEB.html">Servicios WEB <span class="sr-only">(current)</span></a>
+                    <a class="nav-item nav-link" href="LXCInbox.html">Consulta LXCInbox</a>                    
+                </div>
+            </div>
+        </nav>
+
+        <br />
+
+        <div class="container-fluid">
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-auto">
+                    <h1>Servicios WEB SOAP desplegados Exitosamente</h1>
+                </div>
+            </div>
+            <br>
+            <div class="row justify-content-md-center">
+                <div class="col-12 col-md-auto">
+                    <table class="table table-bordered table-responsive" id="tablaServicios">
+                        <thead class="thead-dark">
+                            <tr>
+                                <th>Nombre del Servicio</th>
+                                <th>Descripcion del Servicio</th>
+                                <th>Metodos del Servicio</th>
+                                <th>Estado Servicio</th>
+                                <th>WSDL del Servicio</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TransaccioneService</td>
+                                <td>Este servicio realizara todas las Transacciones de Inventario</td>
+                                <td>- pruebaConector
+                                    <br /> 
+                                    - operarTransaccionInv
+                                    <br /> 
+                                    - operarConsumos
+                                    <br /> 
+                                    - operarAceros
+                                    <br /> 
+                                    - operarRechazos
+                                    <br /> 
+                                    - operarReporteProd</td>
+                                <td>
+                                    <div class="led-green"></div>
+                                </td>
+                                <td><a target="_blank" href="http://localhost:8080/InteroperaLX/TransaccionesService?wsdl">IR AL WSDL</a></td>
+                            </tr>
+                            <tr>
+                                <td>DespachosService</td>
+                                <td>Este servicio realizara todos los Procesos de Despachos</td>
+                                <td>hiloAscincrono</td>
+                                <td>
+                                    <div class="led-red"></div>
+                                </td>
+                                <td><a target="_blank" href="http://localhost:9082/InteroperaERP/DespachosService/DespachosService.wsdl">IR AL WSDL</a></td>
+                            </tr>
+                            <tr>
+                                <td>PedidosService</td>
+                                <td>Este servicio realizara todos los Procesos de Pedidos</td>
+                                <td>- pruebaConector 
+                                    <br /> 
+                                    - crearPedido
+                                </td>
+                                <td>
+                                    <div class="led-green"></div>
+                                </td>
+                                <td><a target="_blank" href="http://localhost:8080/InteroperaLX/TransaccionesService?wsdl">IR AL WSDL</a></td>
+                            </tr>
+                            <tr>
+                                <td>MaestrosService</td>
+                                <td>Este servicio Administrara todo el Procesos de Maestros</td>
+                                <td>- pruebaConector
+                                    <br /> 
+                                    - crearProducto</td>      
+                                <td>
+                                    <div class="led-red"></div>
+                                </td>
+                                <td><a target="_blank" href="http://localhost:8080/InteroperaLX/MaestroService?wsdl">IR AL WSDL</a></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>Nombre del Servicio</th>
+                                <th>Descripcion del Servicio</th>
+                                <th>Metodos del Servicio</th>
+                                <th>Estado Servicio</th>
+                                <th>WSDL del Servicio</th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

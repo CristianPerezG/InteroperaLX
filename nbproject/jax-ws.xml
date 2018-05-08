@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jax-ws xmlns="http://www.netbeans.org/ns/jax-ws/1">
+  <services>
+    <service name="TransaccionesService">
+      <implementation-class>org.bellota.services.TransaccionesService</implementation-class>
+    </service>
+    <service name="PedidosService">
+      <implementation-class>org.bellota.services.PedidosService</implementation-class>
+    </service>
+    <service name="MaestroService">
+      <implementation-class>org.bellota.services.MaestroService</implementation-class>
+    </service>
+    <service name="DespachosService">
+      <implementation-class>org.bellota.services.DespachosService</implementation-class>
+    </service>
+  </services>
+  <clients>
+  </clients>
+  <jsr109>false</jsr109>
+</jax-ws>

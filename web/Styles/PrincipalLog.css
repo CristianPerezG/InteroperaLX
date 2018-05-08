@@ -1,0 +1,33 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 04-abr-2018, 14:40:59
+    Author     : cperez
+*/
+
+.ui-timepicker-div .ui-widget-header { margin-bottom: 8px; }
+.ui-timepicker-div dl { text-align: left; }
+.ui-timepicker-div dl dt { height: 25px; margin-bottom: -25px; }
+.ui-timepicker-div dl dd { margin: 0 10px 10px 65px; }
+.ui-timepicker-div td { font-size: 90%; }
+.ui-tpicker-grid-label { background: none; border: none; margin: 0; padding: 0; }
+.ui-timepicker-rtl{ direction: rtl; }
+.ui-timepicker-rtl dl { text-align: right; }
+.ui-timepicker-rtl dl dd { margin: 0 65px 10px 10px; }
+table.dataTable.table-condensed .bootstrap-datetimepicker-widget thead > tr > th {
+    padding-right: 0;
+    padding-left: 0;
+}
+table.dataTable.table .bootstrap-datetimepicker-widget thead > tr > th {
+    padding-right: 0;
+    padding-left: 0;
+}
+
+a, a:hover, a:active, a:visited { color: white; }
+
+div.container {
+    width: 80%;
+}

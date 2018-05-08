@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<endpoints version="2.0" xmlns="http://java.sun.com/xml/ns/jax-ws/ri/runtime">
+  <endpoint implementation="org.bellota.services.TransaccionesService" name="TransaccionesService" url-pattern="/TransaccionesService"/>
+  <endpoint implementation="org.bellota.services.PedidosService" name="PedidosService" url-pattern="/PedidosService"/>
+  <endpoint implementation="org.bellota.services.MaestroService" name="MaestroService" url-pattern="/MaestroService"/>
+  <endpoint implementation="org.bellota.services.DespachosService" name="DespachosService" url-pattern="/DespachosService"/>
+</endpoints>
